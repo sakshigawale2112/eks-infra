@@ -5,7 +5,7 @@ pipeline {
 
         stage('Pull') {
             steps {
-                git branch: 'main', url: https://github.com/sakshigawale2112/eks-infra.git
+                git branch: 'main', 'url: https://github.com/sakshigawale2112/eks-infra.git'
             }
         }
 
