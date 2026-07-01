@@ -119,7 +119,7 @@ resource "aws_iam_role_policy_attachment" "con_registry_public_read_only_attachm
 }
 
 resource "aws_eks_node_group" "node_group" {
-  cluster_name    = aws_eks_cluster.eks-cluster.name
+  cluster_name    = aws_eks_cluster.eks_cluster.name
   node_group_name = "node-grp-1"
   node_role_arn   = aws_iam_role.node_role.arn
   subnet_ids      = data.aws_subnets.subnet.ids
