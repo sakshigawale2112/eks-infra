@@ -5,7 +5,7 @@ provider "aws" {
 
 
 resource "aws_iam_role" "cluster_role" {
-  name = "eks_cluster_role-1"
+  name = "eks-cluster-role-sakshi"
 
   
   assume_role_policy = jsonencode({
@@ -72,7 +72,7 @@ resource "aws_eks_cluster" "eks_cluster"  {
 }
 
 resource "aws_iam_role" "node_role" {
-  name = "node-1"
+  name = "eks-node-role-sakshi"
 
   
   assume_role_policy = jsonencode({
@@ -82,7 +82,7 @@ resource "aws_iam_role" "node_role" {
             "Effect": "Allow"
             "Principal": {
                 "Service": [
-                    "eks.amazonaws.com"
+                    "ec2.amazonaws.com"
                 ]
             },
             "Action": "sts:AssumeRole"
